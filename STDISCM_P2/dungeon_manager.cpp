@@ -23,6 +23,7 @@ void DungeonManager::processQueue() {
 
         if (tanks < 1 || healers < 1 || dps < 3) {
             std::cout << "Not enough players left to form a party. Stopping queue processing." << std::endl;
+            std::cout << "--------------------------------------" << std::endl;
             break;
         }
 
@@ -72,7 +73,7 @@ void DungeonManager::processQueue() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
-    std::cout << "\nSummary of Instances:" << std::endl;
+    std::cout << "Summary of Instances:" << std::endl;
     for (uint32_t i = 0; i < maxInstances; i++) {
         std::cout << "Instance " << i + 1 << " had "
             << instanceStatus[i].partyCount << " parties for "
