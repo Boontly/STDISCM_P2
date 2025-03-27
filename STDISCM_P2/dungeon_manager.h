@@ -20,6 +20,7 @@ private:
     uint32_t tanks;
     uint32_t healers;
     uint32_t dps;
+    uint32_t nextInstanceIndex = 0;
 
     struct InstanceStatus {
         bool active;
